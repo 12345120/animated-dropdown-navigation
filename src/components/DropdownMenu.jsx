@@ -86,7 +86,7 @@ function DropdownMenu({ }) {
           </DropdownItem>
           <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
           <DropdownItem leftIcon="🐸">Frog</DropdownItem>
-          <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
+          <DropdownItem leftIcon="🦋">Butterfly</DropdownItem>
           <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
         </div>
       </CSSTransition>

@@ -1,7 +1,55 @@
 source: 
 https://www.youtube.com/watch?v=IF6k0uZuypA&list=PLkWiK56gC4b8vjFlsvF1Z2CfFsnikqm-e&index=10
 
+https://medium.com/trabe/a-comprehensive-guide-to-using-bem-with-react-14d00c199e0d
+BEM convention (web dev list in medium) 
+- Block Element Modifier
+- BlockInPascalCase_elementInCamelCase (notice the single underscore for elements) (ex) VideoPlayer_buttonsContainer) 
+- Block___modifierInCamel (notice the triple underscore) (ex) VideoPlayer___isLoading)
 
+
+problem: 
+- if you want to do more than one step of navigation, than how do you implement that with the secondary dropdown?
+	- secondary dropdown can only move from left to right, but for a third dropdown to move in, it has to move the opposite direction 
+- on the first click on Settings, it doesn't show natural height change (from the second, it does) 
+	- Fixed: by using useEffect and calculating the initial offsetHeight of dropdown (menuHeight is initially null in useState, that was the cause) 
+
+
+https://stackoverflow.com/questions/60903335/warning-finddomnode-is-deprecated-in-strictmode-finddomnode-was-passed-an-inst
+- note on <React.StrictMode> <App /> </React.StrictMode>
+- deprecation detection, identifying components with unsafe lifecycles 
+- and more
+- get rid of it if you don't want deprecation warnings
+
+
+style={ { height: sth } } --> outer {} is the js notation in jsx, while the inner {} is the js object 
+
+
+https://blog.logrocket.com/the-top-5-react-animation-libraries-compared/
+- 5 most popluar react animation libraries 
+	- react transition group --> FireShip uses this (a very lightweight library with amazing functionality) 
+
+https://www.youtube.com/watch?v=1h-yZQQnrHg
+- react transition group tutorial (@19:43 -- explains internal logic) 
+- 3 states: enter, enter-active, enter-done (for exit and appear as well) (appear is the initial load) 
+- enter, then right after, enter-active, then enter-done
+- you define the css of these classes 
+
+just realized by playing with the react functional components: 
+- if you nest (not side by side, but nest inside) a cmpt (dropdownItem in my case inside dropdownmenu), the wrapper cmpt's prop 
+	could be accessed by the inner cmpt 
+- FS intentionally nested the dropdownitem cmpt bc that way it can access the setActiveMenu useState function
+
+
+
+https://stackoverflow.com/questions/4855168/what-is-href-and-why-is-it-used
+- why href=# is used --> top of page
+
+
+https://stackoverflow.com/questions/62088649/empty-square-brackets-in-javascript
+- [] at the end of useEffect hook 
+- if no [], triggers on every render !!! (didn't realize this and had it run multiple times) 
+- if [], runs only once
 
 
 
