@@ -7,6 +7,7 @@ import { ReactComponent as CogIcon } from "../icons/cog.svg";
 import { ReactComponent as ChevronIcon } from "../icons/chevron.svg";
 import { ReactComponent as ArrowIcon } from "../icons/arrow.svg";
 import { ReactComponent as BoltIcon } from "../icons/bolt.svg";
+
 import { useState } from "react";
 
 function Navbar({ children }) {
@@ -27,7 +28,10 @@ export function NavItem({ icon, children }) {
       <a
         href="#"
         className="navitem__iconButton"
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setOpen(!open);
+        }}
+        style={{ backgroundColor: open ? "#3855d6" : "#484a4d" }}
       >
         {icon}
       </a>
